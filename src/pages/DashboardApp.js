@@ -18,7 +18,7 @@ Blog.propTypes = {
 function Blog(props) {
   const { photoType } = props;
   const [loading, setLoading] = useState(false);
-  const [, setNewPhotos] = useState([]);
+  const [photo, setNewPhotos] = useState([]);
   console.log(store.getState());
   console.log('ddd', props);
 
@@ -43,7 +43,7 @@ function Blog(props) {
           </Stack>
 
           <Grid container spacing={3}>
-            {props.photoType.map((post, index) => (
+            {photo.map((post, index) => (
               <BlogPostCard key={post.id} photos={post} index={index} />
             ))}
           </Grid>
