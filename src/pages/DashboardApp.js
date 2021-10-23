@@ -29,7 +29,7 @@ function Blog(props) {
       setNewPhotos(photoType);
     })();
     setLoading(false);
-  }, []);
+  }, [props, photoType]);
 
   return (
     <>
