@@ -25,8 +25,6 @@ import {
   ListItemAvatar,
   ListItemButton
 } from '@material-ui/core';
-// utils
-import { mockImgAvatar } from '../../utils/mockImages';
 // components
 import Scrollbar from '../../components/Scrollbar';
 import MenuPopover from '../../components/MenuPopover';
@@ -47,7 +45,7 @@ const NOTIFICATIONS = [
     id: faker.datatype.uuid(),
     title: faker.name.findName(),
     description: 'answered to your comment on the Minimal',
-    avatar: mockImgAvatar(2),
+    avatar: null,
     type: 'friend_interactive',
     createdAt: sub(new Date(), { hours: 3, minutes: 30 }),
     isUnRead: true
